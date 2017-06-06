@@ -2,8 +2,12 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // A:
 
-function max(){
-    // Your answer here
+function max(num1, num2){
+    if (num1 > num2) {
+      return num1;
+    } else {
+      return num2;
+    }
 }
 
 
@@ -11,8 +15,14 @@ function max(){
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // A:
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(num1, num2, num3){
+    if (num1 > num2 && num1 > num3) {
+      return num1;
+    } else if (num2 > num1 && num2 > num3) {
+      return num2;
+    } else {
+      return num3;
+    }
 }
 
 
@@ -20,8 +30,20 @@ function maxOfThree(){
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // A:
 
-function isVowel(char){
-    // Your answer here
+function isVowel(char) {
+  if (char.length > 1) {
+    return false;
+  } else if (char.toLowerCase() === "a") {
+    return true;
+  } else if (char.toLowerCase() === "e") {
+    return true;
+  } else if (char.toLowerCase() === "i") {
+    return true;
+  } else if (char.toLowerCase() === "o") {
+    return true;
+  } else if (char.toLowerCase() === "u") {
+    return true;
+  } return false;
 }
 
 
@@ -29,18 +51,27 @@ function isVowel(char){
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // A:
 
+function sum(num1, num2) {
+  return num1 + num2;
+}
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // A:
 
+function avg(num1, num2, num3) {
+  return (num1 + num2 + num3)/3;
+}
 
 
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // A:
 
+function getLength(string) {
+  return string.length;
+}
 
 
 // 7.
@@ -49,6 +80,11 @@ function isVowel(char){
 // Otherwise the function should return `false`.
 // A:
 
+function greaterThan(first, second) {
+  if (first < second) {
+    return true;
+  } return false;
+}
 
 
 // 8.
@@ -58,6 +94,9 @@ function isVowel(char){
 // is the parameter that was passed in.
 // A:
 
+function greet(Name) {
+  return "Hello, " + Name + "!";
+}
 
 
 // 9.
@@ -68,3 +107,10 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // A:
+
+function madlib(word1, word2, word3, word4) {
+  // var words = [word1, word2, word3, word4];
+  // var random = Math.floor(Math.random() * 4);
+  // var randomWord = words[random];
+  return randomWord + " brown " + word2 + " jumps over the " + word3 + " and into the " + word4;
+}
